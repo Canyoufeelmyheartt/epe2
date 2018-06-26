@@ -1,0 +1,49 @@
+<ion-header text="center" color="dark"no-border>
+    <ion-navbar color="dark">
+        <img src="/assets/imgs/logos2.png">
+       </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+      <ion-card>
+          <ion-item>
+                    <h1 text-center><b>LOGIN</b></h1>
+                    
+                </ion-item>
+          <img src="assets/imgs/login.jpg">
+      <br>
+<ion-card>
+    <form>
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Correo electrónico</ion-label>
+                <ion-input type="email" autocorrect="off" autocapitalize="none" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Contraseña</ion-label>
+                <ion-input type="password" name="password" required minlength="6"></ion-input>
+            </ion-item>
+<br>
+<div padding-left padding-right>
+    <p>&iquest;No tiene Cuenta de Usuario? <a (click)="signUp()">Regístrese</a>
+</div>
+            <br>
+            <br>
+        </ion-list>
+        <br>
+    </form>
+  </ion-card>
+  </ion-card>
+  <ion-fab  top right edge>
+    <button  color="dark" ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

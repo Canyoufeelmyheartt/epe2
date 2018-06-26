@@ -1,0 +1,71 @@
+<link href="https://fonts.googleapis.com/css?family=Cuprum|Dosis" rel="stylesheet">
+<ion-header text="center" color="dark"no-border>
+    <ion-toolbar color="dark">
+        <img src="/assets/imgs/logos2.png" (click)="principal(PrincipalPage)">
+      
+      </ion-toolbar>
+  </ion-header>
+ 
+<ion-content padding>
+
+    <ion-card>
+        
+              <img src="assets/imgs/menu1.jpg">
+          
+              <ion-item>
+                  <h2 text-center><b>Ingresa los Datos </b></h2> 
+              </ion-item>
+            </ion-card>
+          <br>
+
+<ion-list>
+    <ion-item>
+        <ion-label floating>Nombre :</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="model.title"></ion-input>
+      </ion-item>   
+      <ion-item>
+          <ion-label floating>Correo :</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="model.correo"></ion-input>
+        </ion-item>            
+      <ion-item>
+        <ion-label floating>Monto Mensual :</ion-label>
+        <ion-textarea   type="text" row="10" [(ngModel)]="model.text"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <button type="button"  color="primary" (click)="addAdoptar()" ion-button full >Guardar</button>
+      </ion-item>
+</ion-list>
+ 
+  <ion-card>
+    <ion-card-header>
+        Desliza el elemento hacia la<br> izquierda para borrar o editar
+    </ion-card-header>
+  </ion-card>
+  <ion-list>
+    <ion-item-sliding *ngFor="let adoptar of adoptar">
+      <ion-item>
+        <h3>Nombre:</h3> {{adoptar.title}}
+        <h3>Correo:</h3> {{adoptar.correo}}
+        <h3>Monto Mensual:</h3> ${{adoptar.text}}
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteAdoptar(adoptar.$key)">
+        <ion-icon name="ios-trash"></ion-icon>
+        Eliminar
+      </button>
+      <button ion-button color="success" (click)="updateAdoptar(adoptar)">
+          <ion-icon name="ios-create"></ion-icon>
+        Editar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+ 
+  <ion-fab top right edge >
+      <button color="dark" ion-fab>
+        <ion-icon  name="paw"></ion-icon>
+      </button>
+    </ion-fab>   
+
+</ion-content>
+

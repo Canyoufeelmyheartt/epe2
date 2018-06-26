@@ -1,0 +1,42 @@
+<link href="https://fonts.googleapis.com/css?family=Cuprum|Dosis" rel="stylesheet">
+<ion-header text="center" color="dark"no-border>
+    <ion-toolbar color="dark">
+       
+        <button ion-button menuToggle>  <!-- falta en el ts funcion-->
+          <ion-icon name="menu" ></ion-icon>
+        </button>
+        <img src="/assets/imgs/logos2.png">
+      </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-item>
+                  <h1 text-center><b>Apadrinate</b></h1>
+                  
+              </ion-item>
+              <img src="assets/imgs/can6.jpg">
+          
+              
+            </ion-card>
+        <p text-center>
+          Apadrinar un perro o un gato  abre muchas otras posibilidades. Además de un monto mensual, 
+          la idea es que el padrino o madrina pueda establecer una conexión especial con su ahijado/a; lo visite y 
+          lo saque a pasear, lo regalonee y lo difunda de manera especial para lograr encontrarle un hogar.</p>
+          <br>
+
+          <button ion-button block (click)="signin(signinPage)">Entrar a mi cuenta</button>
+       
+      
+          <ion-fab  top right edge>
+            <button  color="dark" ion-fab mini><ion-icon name="add"></ion-icon></button>
+            <ion-fab-list>
+              <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+              <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+              <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+              <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+            </ion-fab-list>
+          </ion-fab>
+  
+  
+</ion-content>

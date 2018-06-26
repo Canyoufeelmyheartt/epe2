@@ -1,0 +1,29 @@
+<ion-header text="center" color="dark"no-border>
+        <ion-toolbar color="dark">
+            <img src="/assets/imgs/logos2.png" (click)="home(HomePage)">
+          
+          </ion-toolbar>
+      </ion-header>
+  
+  <ion-content padding>
+
+      <ion-card>
+          <ion-item>
+                    <h1 text-center><b>MENÚ</b></h1>
+                    
+                </ion-item>
+                <img src="assets/imgs/WELCOME.jpg">
+            <br>
+            <br>
+            
+              </ion-card>
+            <br>
+            <button ion-button block (click)="adoptar(AdoptarPage)">Datos de mi mascota</button>      
+           
+            <button ion-button block (click)="patrocinio(PatrocinioPage)">Pagos y patrocinio</button>
+            
+            <button ion-button block >Mi Perfil</button>
+            
+            <button ion-button block (click)="home(HomePage)">Cerrar Sesión</button>
+  </ion-content>
+  
